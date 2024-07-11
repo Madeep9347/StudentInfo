@@ -11,17 +11,16 @@ Date: 4/6/2012 5:22:59 PM
 -- ----------------------------
 -- Table structure for student
 -- ----------------------------
-CREATE TABLE IF NOT  EXISTS `student` (
-  `Id` int(11) NOT NULL auto_increment,
-  `Roll` varchar(50) default NULL,
-  `Name` varchar(255) default NULL,
-  `Email` varchar(255) default NULL,
-  `DateOfBirth` datetime default NULL,
-  PRIMARY KEY  (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS student (
+  Id int(11) NOT NULL AUTO_INCREMENT,
+  Roll varchar(50) DEFAULT NULL,
+  Name varchar(255) DEFAULT NULL,
+  Email varchar(255) DEFAULT NULL,
+  DateOfBirth datetime DEFAULT NULL,
+  PRIMARY KEY (Id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records 
--- ----------------------------
-INSERT INTO `student` VALUES ('1', '028', 'John Doe', 'jdoe@example.org', null);
-INSERT INTO `student` VALUES ('2', null, null, null, null);
+-- Insert records only if they don't exist
+INSERT IGNORE INTO student (Id, Roll, Name, Email, DateOfBirth) VALUES 
+  (1, '028', 'John Doe', 'jdoe@example.org', NULL),
+  (2, NULL, NULL, NULL, NULL);
