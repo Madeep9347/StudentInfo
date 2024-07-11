@@ -11,7 +11,7 @@ Date: 4/6/2012 5:22:59 PM
 -- ----------------------------
 -- Table structure for student
 -- ----------------------------
-CREATE TABLE `student` (
+CREATE TABLE IF NOT  EXISTS `student` (
   `Id` int(11) NOT NULL auto_increment,
   `Roll` varchar(50) default NULL,
   `Name` varchar(255) default NULL,
