@@ -13,10 +13,10 @@ class DatabaseConnection {
     private $dbHost;
 
     public function DatabaseConnection() {
-        $this->dbUser = 'root';
-        $this->dbPassword = '';
-        $this->dbName = 'stdinfo';
-        $this->dbHost = 'localhost';
+        $this->dbUser = 'admin';
+        $this->dbPassword = 'Madhu1234!';
+        $this->dbName = 'ecommerce';
+        $this->dbHost = '10.0.157.166';
     }
 
     public function GetDB() {
