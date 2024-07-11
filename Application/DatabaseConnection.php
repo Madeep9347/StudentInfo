@@ -16,7 +16,7 @@ class DatabaseConnection {
         $this->dbUser = 'admin';
         $this->dbPassword = 'Madhu1234!';
         $this->dbName = 'ecommerce';
-        $this->dbHost = 'database-2.cruq66wo2x31.ap-south-1.rds.amazonaws.com';
+        $this->dbHost = '10.0.157.166';
     }
 
     public function GetDB() {
